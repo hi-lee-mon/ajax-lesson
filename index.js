@@ -2,14 +2,16 @@ const express = require("express");
 const dotenv = require("dotenv");
 const lessonOneRouter = require("./routes/lessonOne");
 const topPage = require("./pages/top");
+const cors = require("cors");
 const app = express();
 dotenv.config();
 
 app.use(express.static("public"))
 
 const corsOptions = {
-  // origin: 'http://localhost:3000',
-  optionsSuccessStatus: 200
+  // origin: 'http://localhost:3000', //アクセス許可するオリジン
+  credentials: true, //レスポンスヘッダーにAccess-Control-Allow-Credentials追加
+  optionsSuccessStatus: 200 //レスポンスstatusを200に設定
 }
 
 app.use(cors(corsOptions))
