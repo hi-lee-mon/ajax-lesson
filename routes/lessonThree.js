@@ -14,26 +14,26 @@ router.get("/" ,(request, response) => {
           date:dayjs().format('YYYY-MM-DD'),
           time:dayjs().format('HH:mm:ss'),
           text:"お願いしてもいい？",
-          image:"image",
         },
         {
           sender:"theOtherSide",
           date:dayjs().format('YYYY-MM-DD').add,
           time:dayjs().add(10,"minute").format('HH:mm:ss'),
           text:"どうしたー？",
+          image:"image",
         },
         {
           sender:"me",
           date:dayjs().format('YYYY-MM-DD'),
           time:dayjs().add(10,"second").format('HH:mm:ss'),
           text:"科学の宿題やるの忘れちゃって、今度おごるから答え送って🙇‍♂️",
-          image:"image",
         },
         {
           sender:"theOtherSide",
           date:dayjs().add(2,"day").format('YYYY-MM-DD').add,
           time:dayjs().format('HH:mm:ss'),
           text:"スタバ2回",
+          image:"image",
         },
         {
           sender:"me",
