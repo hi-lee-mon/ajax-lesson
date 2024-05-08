@@ -1,14 +1,14 @@
-const express = require("express");
-const dotenv = require("dotenv");
-const lessonOneRouter = require("./routes/lessonOne");
-const lessonTwoRouter = require("./routes/lessonTwo");
-const lessonThreeRouter = require("./routes/lessonThree");
-const topPage = require("./pages/top");
-const cors = require("cors");
+const express = require('express');
+const dotenv = require('dotenv');
+const lessonOneRouter = require('./routes/lessonOne');
+const lessonTwoRouter = require('./routes/lessonTwo');
+const lessonThreeRouter = require('./routes/lessonThree');
+const topPage = require('./pages/top');
+const cors = require('cors');
 const app = express();
 dotenv.config();
 
-app.use(express.static("public"))
+app.use(express.static('public'));
 
 // const corsOptions = {
 //   origin: 'http://localhost:3000', //アクセス許可するオリジン
@@ -16,22 +16,24 @@ app.use(express.static("public"))
 //   optionsSuccessStatus: 200 //レスポンスstatusを200に設定
 // }
 
-app.use(cors())
+app.use(cors());
 
 const PORT = process.env.PORT;
 
-app.listen(PORT, () => {
-  console.log("Server running at PORT: ", PORT);
-}).on("error", (error) => {
-  // エラーの処理
-  throw new Error(error.message);
-})
+app
+  .listen(PORT, () => {
+    console.log('Server running at PORT: ', PORT);
+  })
+  .on('error', (error) => {
+    // エラーの処理
+    throw new Error(error.message);
+  });
 
-app.get("/", (request, response) => {
+app.get('/', (request, response) => {
   response.status(200).send(topPage);
-})
+});
 
 // ルーティング
-app.use("/lessonOne",lessonOneRouter);
-app.use("/lessonTwo",lessonTwoRouter);
-app.use("/lessonThree",lessonThreeRouter);
+app.use('/lessonOne', lessonOneRouter);
+app.use('/lessonTwo', lessonTwoRouter);
+app.use('/lessonThree', lessonThreeRouter);
