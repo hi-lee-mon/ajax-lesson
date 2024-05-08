@@ -1,6 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const lessonOneRouter = require("./routes/lessonOne");
+const lessonTwoRouter = require("./routes/lessonTwo");
 const topPage = require("./pages/top");
 const cors = require("cors");
 const app = express();
@@ -31,3 +32,4 @@ app.get("/", (request, response) => {
 
 // ルーティング
 app.use("/lessonOne",lessonOneRouter);
+app.use("/lessonTwo",lessonTwoRouter);

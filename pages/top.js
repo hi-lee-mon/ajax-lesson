@@ -43,6 +43,9 @@ const topPage = `
     </header>
     <section class="lessons">
       <a href="/lessonOne">課題1</a>
+      <form action="/lessonTwo" method="post">
+        <button>課題2</button>
+      </form>
     </section>
   </div>
 `
