@@ -1,25 +1,20 @@
 const express = require("express");
-const logger = require("../logger");
 const router = express.Router();
 
-router.get("/", logger ,(request, response) => {
-  response.status(200).send("lessonOneです");
-})
-
-router.get("/:id", (request, response) => {
-  response.status(200).send(`${request.params.id}のユーザ`);
-})
-
-router.post("/:id", (request, response) => {
-  response.status(200).send(`${request.params.id}のユーザ`);
-})
-
-router.delete("/:id", (request, response) => {
-  response.status(200).send(`${request.params.id}のユーザ`);
-})
-
-router.put("/:id", (request, response) => {
-  response.status(200).send(`${request.params.id}のユーザ`);
+router.get("/" ,(request, response) => {
+  const data = {
+    statusCode: 200,
+    message: "正常なレスポンス",
+    result: {
+      name: "デフォルトネーム",
+      email: "defaultMail@exsample.com",
+      password: "12345678",
+      sex: "man",
+      questions: "java",
+      birth: "1"
+    }
+  };
+  response.status(200).json(data);
 })
 
 module.exports = router;

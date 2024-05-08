@@ -1,15 +1,14 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const lessonOneRouter = require("./routes/lessonOne");
-
+const topPage = require("./pages/top");
 const app = express();
 dotenv.config();
 
+app.use(express.static("public"))
+
 const PORT = process.env.PORT;
 
-/**
- * ベースパスの指定
- */
 app.listen(PORT, () => {
   console.log("Server running at PORT: ", PORT);
 }).on("error", (error) => {
@@ -17,9 +16,8 @@ app.listen(PORT, () => {
   throw new Error(error.message);
 })
 
-
 app.get("/", (request, response) => {
-  response.status(200).send("hello");
+  response.status(200).send(topPage);
 })
 
 // ルーティング
