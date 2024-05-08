@@ -7,6 +7,13 @@ dotenv.config();
 
 app.use(express.static("public"))
 
+const corsOptions = {
+  // origin: 'http://localhost:3000',
+  optionsSuccessStatus: 200
+}
+
+app.use(cors(corsOptions))
+
 const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
