@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const dayjs = require("dayjs");
+const cors = require("cors");
 
-router.post("/" ,(request, response) => {
+router.post("/",cors(),(request, response) => {
   const now = dayjs().format('YYYY-MM-DD HH:mm:ss');
   const data = {
     statusCode: 200,
