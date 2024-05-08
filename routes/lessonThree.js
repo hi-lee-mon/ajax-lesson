@@ -17,7 +17,7 @@ router.get("/" ,(request, response) => {
         },
         {
           sender:"theOtherSide",
-          date:dayjs().format('YYYY-MM-DD').add,
+          date:dayjs().format('YYYY-MM-DD'),
           time:dayjs().add(10,"minute").format('HH:mm:ss'),
           text:"どうしたー？",
           image:"image",
@@ -30,7 +30,7 @@ router.get("/" ,(request, response) => {
         },
         {
           sender:"theOtherSide",
-          date:dayjs().add(2,"day").format('YYYY-MM-DD').add,
+          date:dayjs().add(2,"day").format('YYYY-MM-DD'),
           time:dayjs().format('HH:mm:ss'),
           text:"スタバ2回",
           image:"image",
