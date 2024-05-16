@@ -4,8 +4,8 @@ const router = express.Router();
 
 const validation = (query) => {
   if (!query.password && !query.employeeNumber) return '1';
-  if (!query.password) return '2';
-  if (!query.employeeNumber) return '3';
+  if (!query.employeeNumber) return '2';
+  if (!query.password) return '3';
 };
 
 router.get('/', (request, response) => {
