@@ -1,5 +1,8 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const practiceOneRouter = require('./routes/practiceOne');
+const practiceTwoRouter = require('./routes/practiceTwo');
+const practiceTwoPlusRouter = require('./routes/practiceTwoPlus');
 const lessonOneRouter = require('./routes/lessonOne');
 const lessonTwoRouter = require('./routes/lessonTwo');
 const lessonThreeRouter = require('./routes/lessonThree');
@@ -9,12 +12,6 @@ const app = express();
 dotenv.config();
 
 app.use(express.static('public'));
-
-// const corsOptions = {
-//   origin: 'http://localhost:3000', //アクセス許可するオリジン
-//   credentials: true, //レスポンスヘッダーにAccess-Control-Allow-Credentials追加
-//   optionsSuccessStatus: 200 //レスポンスstatusを200に設定
-// }
 
 app.use(cors());
 
@@ -34,6 +31,9 @@ app.get('/', (request, response) => {
 });
 
 // ルーティング
+app.use('/practiceOne', practiceOneRouter);
+app.use('/practiceTwo', practiceTwoRouter);
+app.use('/practiceTwoPlus', practiceTwoPlusRouter);
 app.use('/lessonOne', lessonOneRouter);
 app.use('/lessonTwo', lessonTwoRouter);
 app.use('/lessonThree', lessonThreeRouter);

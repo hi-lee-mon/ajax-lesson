@@ -30,7 +30,7 @@ const css = `
   gap:20px;
 }
 </style>
-`
+`;
 
 const topPage = `
   ${css}
@@ -42,6 +42,9 @@ const topPage = `
       </a>
     </header>
     <section class="lessons">
+      <a href="/practiceOne">Ajax練習1</a>
+      <a href="/practiceTwo">Ajax練習2</a>
+      <a href="/practiceTwoPlus">Ajax練習2+</a>
       <a href="/lessonOne">課題1</a>
       <form action="/lessonTwo" method="post">
         <button>課題2</button>
@@ -49,6 +52,6 @@ const topPage = `
       <a href="/lessonThree">課題3</a>
     </section>
   </div>
-`
+`;
 
 module.exports = topPage;
