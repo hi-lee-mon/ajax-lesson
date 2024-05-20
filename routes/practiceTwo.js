@@ -9,6 +9,7 @@ const validation = (query) => {
 };
 
 router.get('/', (request, response) => {
+  response.set('Cache-Control', 'public, max-age=36000');
   const SLEEP_TIME = 3000;
   setTimeout(() => {
     const validationResult = validation(request.query);
@@ -39,6 +40,7 @@ router.get('/', (request, response) => {
 });
 
 router.get('/:time', (request, response) => {
+  response.set('Cache-Control', 'public, max-age=36000');
   const SLEEP_TIME = request.params.time;
   setTimeout(() => {
     const validationResult = validation(request.query);
