@@ -39,7 +39,7 @@ const nonAjaxMapOnePage = `
       <h1>non-Ajax体験</h1>
     </header>
     <section class="lessons">
-      <h1>地図001(3000k)</h1>
+      <h1>地図001(ダウンロードを3000kbitにして表示すると不便さを感じられる)</h1>
       <a href="/">Homeページ</a>
       <img src="/001-googleMap.png"/>
       <a href="/nonAjaxMap/two" style="font-size: 32px;">

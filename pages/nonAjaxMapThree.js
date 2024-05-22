@@ -42,7 +42,7 @@ const nonAjaxMapOnePage = `
       <h1>地図003</h1>
       <a href="/">Homeページ</a>
       <img src="/003-googleMap.png" />
-      <a href="/nonAjaxMap/three" style="font-size: 32px;">-</a>
+      <a href="/nonAjaxMap/two" style="font-size: 32px;">-</a>
     </section>
   </div>
 `;
