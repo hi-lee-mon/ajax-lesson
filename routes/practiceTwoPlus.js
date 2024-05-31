@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (request, response) => {
-  response.set('Cache-Control', 'public, max-age=36000');
+  // response.set('Cache-Control', 'public, max-age=36000');
   if (request.query.employeeNumber === '001') {
     response.status(200).json({
       statusCode: 200,
